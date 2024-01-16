@@ -1,8 +1,8 @@
 ---
 layout: default
-title:  "Welcome to Jekyll!"
-date:   2024-01-16 10:53:18 +0530
-categories: jekyll update
+title: "Understanding the Quadratic Formula"
+date: 2024-01-17
+categories: math
 ---
 
 Welcome to my blog post about the quadratic formula! Today, we'll explore how this formula is derived and some of its applications.
