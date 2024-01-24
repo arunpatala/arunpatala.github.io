@@ -130,11 +130,10 @@ GitHub Pages uses Ruby version 2.7.4, so you'll need to install this version.
 - **Create your own `head.html` in the `_includes` directory of your project and add the MathJax script.**
 - **Build and serve your site to check the changes.**
 
-
 ## References
 
-1. GitHub Official Dependency Versions. Retrieved from [https://pages.github.com/versions/](https://pages.github.com/versions/)
+1. [GitHub Official Dependency Versions](https://pages.github.com/versions/) - Web Page
 
-2. Alternate Installation (Not Tested). Retrieved from [https://kbroman.org/simple_site/pages/local_test.html](https://kbroman.org/simple_site/pages/local_test.html)
+2. [Alternate Installation (Not Tested)](https://kbroman.org/simple_site/pages/local_test.html) - Web Page
 
-3. Setup GitHub Pages. Retrieved from [https://docs.github.com/en/pages/quickstart](https://docs.github.com/en/pages/quickstart)
+3. [Setup GitHub Pages](https://docs.github.com/en/pages/quickstart) - Web Page

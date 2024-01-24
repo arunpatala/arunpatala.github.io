@@ -11,21 +11,19 @@ RLHF and DPO
 --------------------------------
 RLHF (Reinforcement learning using human feedback) and DPO (Direct Preference Optimization)
 
-**Table of Contents**
-
-1. **Introduction**
-
-2. **Understanding Instruct Models**
-
-3. **Reinforcement Learning from Human Feedback (RLHF)**
-
-4. **Direct Preference Optimization (DPO)**
-
-5. **Conclusion**
-   
+## Table of Contents
+2. [Overview of Text Generation and Language Modeling](#overview-of-text-generation-and-language-modeling)
+3. [Understanding Language Models: The Role of Transformers](#understanding-language-models-the-role-of-transformers)
+4. [Instruct: From Language Modeling to User-Assisting Agents](#instruct-from-language-modeling-to-user-assisting-agents)
+6. [Reinforcement Learning from Human Feedback (RLHF)](#reinforcement-learning-from-human-feedback-rlhf)
+7. [Optimizing Language Model Parameters for RLHF with Policy Gradients](#optimizing-language-model-parameters-for-rlhf-with-policy-gradients)
+8. [Direct Preference Optimization (DPO)](#direct-preference-optimization-dpo)
+9. [Conclusion](#conclusion)
+10. [References](#references)
    
 
-**Overview of Text Generation and Language Modeling**
+Overview of Text Generation and Language Modeling
+--------------------------------------------------------
 
 Language modeling, a core aspect of text generation, focuses on predicting the next word in a sentence based on the preceding context. This approach, while straightforward, is incredibly effective in understanding and processing language.
 
@@ -36,7 +34,9 @@ This capability allows language models to perform a wide range of Natural Langua
 In the following sections, we explore how this technology has evolved and its significant potential in reshaping our interaction with language.
 
 
-**Understanding Language Models: The Role of Transformers**
+Understanding Language Models: The Role of Transformers
+--------------------------------------------------------
+
 
 Transformers are at the forefront of modern language models, revolutionizing how we predict the next word in a sequence. Unlike traditional models that process words linearly, Transformers use 'attention mechanisms' to consider the entire sentence context, not just adjacent words. This approach mirrors human language processing, focusing on context relevance rather than linear word order.
 
@@ -49,9 +49,8 @@ For example, in a sentence like "The cat sat on the __," Transformers can predic
 The GPT series, a cornerstone in large language models, has seen remarkable evolution, primarily characterized by exponential increases in model and dataset sizes. The original GPT, with 117 million parameters, utilized the BooksCorpus dataset, setting a precedent in text generation. Its successor, GPT-2, expanded to 1.5 billion parameters and was trained on the more diverse WebText dataset, showcasing enhanced capabilities and raising ethical discussions. The latest, GPT-3, took a monumental leap with 175 billion parameters, trained on the vast Common Crawl dataset, achieving near-human performance in language tasks. This progression underlines the pivotal role of scale in the sophistication of language models.
 
 
-**Understanding Instruct Models**
-
-**Instruct: From Language Modeling to User-Assisting Agents**
+Instruct: From Language Modeling to User-Assisting Agents
+--------------------------------------------------------
 
 The transition from traditional language models trained on massive internet and book datasets to user-assisting agents represents a significant shift in language processing. While extensive training on diverse text sources enables models to understand the world, these models are not inherently designed to respond to user queries effectively. A model trained on the vastness of the internet can produce a range of answers, from helpful to potentially harmful or biased, in response to a user's question.
 
@@ -80,7 +79,8 @@ Consider the following examples that highlight the difference in responses betwe
 These examples showcase the transformative impact of instruct fine-tuning, shifting the model's output from generic or unhelpful responses to specific, useful answers that directly address the user's query.
 
 
-**Reinforcement Learning from Human Feedback (RLHF)**
+Reinforcement Learning from Human Feedback (RLHF)
+--------------------------------------------------------
 
 **Analyzing the Drawbacks of Unsupervised and Instruct Models**
 
@@ -136,7 +136,9 @@ $$\theta_{t+1} \leftarrow \theta_t + \alpha \nabla_{\theta_t} \mathbb{E}_{s \sim
 **Outcome**: This process is akin to 'reinforcing' good actions (responses with high rewards) by making them more likely to occur in future model outputs. This is the essence of reinforcement learning in the context of language models.
 
 
-**4. Direct Preference Optimization (DPO)**
+Direct Preference Optimization (DPO)
+--------------------------------------------------------
+
 
 **Integrating DPO with Preference Data Without Reinforcement Learning**
 
@@ -162,8 +164,23 @@ $$ \mathcal{L}_{DPO}(\pi'; \pi_{\text{ref}}) = -\mathbb{E}_{(p, x', x'') \sim \m
 
 This direct approach not only simplifies the optimization process but also aligns with theoretical models, ensuring consistency under certain conditions of the preference data distribution. The impact of DPO on language modeling is substantial, providing a more efficient and theoretically consistent method for tailoring language models to human preferences without the intricate complexities of traditional RL methodologies.
 
-**5. Conclusion**
+Conclusion
+--------------------------------------------------------
 
-**Key Points Summary**
+
 
 This overview has traversed the evolving landscape of language modeling, from the scale growth in models like GPT to the nuanced user-centric approaches of Instruct models and Reinforcement Learning from Human Feedback (RLHF). RLHF, with its focus on human preferences, represents a significant evolution, while Direct Preference Optimization (DPO) offers a streamlined method for integrating these preferences directly into language model policies, circumventing traditional reinforcement learning challenges.
+
+
+References
+--------------------------------------------------------
+
+
+- **SLIDES**: [CS224N 2023 Lecture 11 - Prompting & RLHF](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1234/slides/cs224n-2023-lecture11-prompting-rlhf.pdf)
+- **VIDEO**: [Stanford Online - CS224N Lecture 11](https://www.youtube.com/watch?v=SXpJ9EmG3s4&ab_channel=StanfordOnline)
+- [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)
+- [Finetuned Language Models Are Zero-Shot Learners](https://arxiv.org/abs/2109.01652)
+- [Learning to Summarize with Human Feedback](https://arxiv.org/abs/2009.01325)
+- [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)
+- [Direct Preference Optimization](https://arxiv.org/abs/2305.18290)
