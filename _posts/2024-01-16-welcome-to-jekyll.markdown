@@ -1,42 +1,48 @@
 ---
-layout: default
-title:  "Welcome to Jekyll!"
-date:   2024-01-16 10:53:18 +0530
-categories: jekyll update
+layout: post
+title: "Understanding Deep Learning"
+date:   2024-01-22 10:53:18 +0530
+categories: deep-learning ai
 ---
 
-Welcome to my blog post about the quadratic formula! Today, we'll explore how this formula is derived and some of its applications.
+Deep learning is a subset of machine learning where neural networks — algorithms inspired by the human brain — learn from large amounts of data. 
 
-The quadratic formula is used to find the roots of a quadratic equation. A quadratic equation is any equation in the form of:
+## Key Concepts
 
-$$ ax^2 + bx + c = 0 $$
+### Neural Networks
 
-where \( a \), \( b \), and \( c \) are constants, and \( a \neq 0 \).
+A neural network consists of layers of interconnected nodes, or neurons, each performing a simple computation. The output of one layer becomes the input of the next.
 
-The roots of the quadratic equation can be found using the quadratic formula:
+### The Math Behind It
 
-$$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
+The core operation in a neuron is the dot product. Given a vector of inputs \( \mathbf{x} \) and a vector of weights \( \mathbf{w} \), the dot product is:
 
-This formula is derived from completing the square in a quadratic equation.
+\[ \mathbf{w} \cdot \mathbf{x} = \sum_{i=1}^{n} w_i x_i \]
 
-### Example
+Where:
+- \( \mathbf{x} \) is the input vector.
+- \( \mathbf{w} \) is the weights vector.
+- \( n \) is the number of elements in the vectors.
 
-Let's apply the quadratic formula to an example equation:
+### Activation Functions
 
-$$ 2x^2 - 4x - 6 = 0 $$
+After the dot product, an activation function is applied. A common activation function is the sigmoid, defined as:
 
-Here, \( a = 2 \), \( b = -4 \), and \( c = -6 \). Plugging these into the quadratic formula gives us:
+\[ \sigma(x) = \frac{1}{1 + e^{-x}} \]
 
-$$ x = \frac{-(-4) \pm \sqrt{(-4)^2 - 4 \times 2 \times (-6)}}{2 \times 2} $$
+It "squashes" the input to a range between 0 and 1.
 
-$$ x = \frac{4 \pm \sqrt{16 + 48}}{4} $$
+### Backpropagation and Loss Functions
 
-$$ x = \frac{4 \pm \sqrt{64}}{4} $$
+Backpropagation is the key algorithm for training neural networks. It involves computing the gradient of the loss function with respect to each weight. The loss function measures the difference between the network's prediction and the actual target values. A common loss function is the mean squared error (MSE):
 
-$$ x = \frac{4 \pm 8}{4} $$
+\[ MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 \]
 
-So, the solutions are \( x = 3 \) and \( x = -1 \).
+Where:
+- \( y_i \) are the true values.
+- \( \hat{y}_i \) are the predicted values.
+- \( n \) is the number of samples.
 
-I hope this post helped you understand the quadratic formula a bit better!
+---
 
-Remember, MathJax allows us to display complex mathematical expressions neatly in our blog posts.
+Deep learning has revolutionized many fields, including image and speech recognition, natural language processing, and more.
