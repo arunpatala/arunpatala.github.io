@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Setting Up a GitHub Pages Compatible Jekyll Blog on Windows 10"
-date:   2024-01-24 10:53:18 +0530
+title:  "GitHub Pages with mathjax"
+date:   2024-01-23 10:53:18 +0530
 categories: AI
 ---
 
@@ -130,6 +130,11 @@ GitHub Pages uses Ruby version 2.7.4, so you'll need to install this version.
 - **Create your own `head.html` in the `_includes` directory of your project and add the MathJax script.**
 - **Build and serve your site to check the changes.**
 
----
 
-This markdown content is now ready for use in a blog post, ensuring no information is missing and the structure is clear and concise.
+## References
+
+1. GitHub Official Dependency Versions. Retrieved from [https://pages.github.com/versions/](https://pages.github.com/versions/)
+
+2. Alternate Installation (Not Tested). Retrieved from [https://kbroman.org/simple_site/pages/local_test.html](https://kbroman.org/simple_site/pages/local_test.html)
+
+3. Setup GitHub Pages. Retrieved from [https://docs.github.com/en/pages/quickstart](https://docs.github.com/en/pages/quickstart)
